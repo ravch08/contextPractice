@@ -1,0 +1,122 @@
+.lightTheme {
+  --font-color: hsl(180, 6%, 7%);
+  --body-bg-color: hsl(0, 0%, 100%);
+  --body-bg-color2: hsl(226, 100%, 93%);
+  --button-bg: rgb(14, 34, 14);
+  --button-color: rgb(255, 255, 255);
+}
+
+.darkTheme {
+  --font-color: hsl(0, 0%, 80%);
+  --body-bg-color: hsl(180, 6%, 7%);
+  --body-bg-color2: hsl(240, 7%, 11%);
+  --button-bg: lightgreen;
+  --button-color: rgb(0, 0, 0);
+}
+
+#root {
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  color: var(--font-color);
+  background-color: var(--body-bg-color2);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.container {
+  width: 85%;
+  margin-inline: auto;
+}
+
+ul:not(.browser-default) > li {
+  list-style: none;
+}
+
+.about-content {
+  width: 45%;
+}
+
+svg {
+  fill: var(--button-color);
+  transition: fill 0.5s ease-in-out;
+}
+
+button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+section {
+  padding: 5rem 0;
+  color: var(--font-color);
+  height: calc(100vh - 85px);
+  background-color: var(--body-bg-color);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+p {
+  padding: 1.5rem 0;
+}
+
+a:not(.browser-default) {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.nav-list,
+.header-wrapper {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--font-color);
+}
+
+.nav-item {
+  display: flex;
+}
+
+.nav-link {
+  padding: 2rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: rgb(255, 238, 0);
+}
